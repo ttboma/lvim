@@ -97,7 +97,7 @@ lvim.builtin.which_key.mappings["t"] = {
 }
 lvim.builtin.which_key.mappings[","] = {
 	name = "+Extra",
-	t = { "<cmd>TagbarToggle<cr>", "Tagbar" },
+	t = { "<cmd>Vista!!<cr>", "Vista" },
 	r = { "<cmd>Rg<cr>", "fzf-Rg" },
 	R = { "<cmd>RnvimrToggle<cr>", "Ranger" },
 	o = { "<cmd>SymbolsOutline<cr>", "symbols-outline" },
@@ -319,7 +319,6 @@ lvim.plugins = {
 		"folke/trouble.nvim",
 		cmd = "TroubleToggle",
 	},
-	{ 'preservim/tagbar' },
 	{
 		"kevinhwang91/rnvimr",
 		cmd = "RnvimrToggle",
@@ -353,9 +352,9 @@ lvim.plugins = {
 		event = "BufRead",
 	},
 	{
-		"simrat39/symbols-outline.nvim",
+		'liuchengxu/vista.vim',
 		config = function()
-			require('symbols-outline').setup()
+			vim.g.vista_echo_cursor = 0
 		end,
 	},
 	{
