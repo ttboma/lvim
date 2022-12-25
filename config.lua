@@ -58,6 +58,15 @@ lvim.colorscheme = "dracula"
 lvim.transparent_window = true
 lvim.builtin.alpha.mode = "dashboard"
 
+-- lualine 
+lvim.builtin.lualine.options.theme = "dracula"
+lvim.builtin.lualine.sections.lualine_a = {
+	{ 'mode', separator = { left = '' }, right_padding = 2 },
+}
+lvim.builtin.lualine.sections.lualine_z = {
+  { 'location', separator = { right = '' }, left_padding = 2 },
+}
+
 -- Mappings
 ---- fast recover from insert_mode to normal_mode
 lvim.keys.insert_mode["jk"] = "<esc>"
@@ -108,16 +117,13 @@ lvim.builtin.which_key.mappings['w'] = {
 	name = "+Vimwiki",
 }
 
-
--- lualine settup
-lvim.builtin.lualine.options.theme = "dracula"
-
 -- toggleterm setting
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.shell = "/bin/zsh"
 lvim.builtin.terminal.open_mapping = "<esc><esc>" -- This is required some how to get (1) (2) to work
 vim.keymap.set('t', '<esc>', [[<C-\><C-n>]]) -- (1)
 vim.keymap.set('t', ',q', [[<C-\><C-n><cmd>q<cr>]]) -- (2)
+vim.keymap.set('t', '<C-l>', [[clear<cr>]])
 lvim.keys.normal_mode["<M-x>"] = '<cmd>exe v:count1 . "ToggleTerm direction=horizontal"<CR>'
 lvim.keys.normal_mode["<M-v>"] = '<cmd>exe v:count1 . "ToggleTerm direction=vertical size=50"<CR>'
 lvim.keys.normal_mode["<M-t>"] = '<cmd>exe v:count1 . "ToggleTerm direction=float"<CR>'
@@ -378,7 +384,7 @@ lvim.plugins = {
 				\     'template_path'      : '$HOME/SYCvimwiki/templates/',
 				\ 	  'template_default'   : 'def_template',
 				\     'template_ext'       : '.html',
-				\     'nested_syntaxes'    : {'python': 'python', 'c++': 'cpp', 'yaml': 'yaml' },
+				\     'nested_syntaxes'    : {'python': 'py', 'c++': 'cpp', 'yaml': 'yaml' },
 				\     'auto_tags'          : 1,
 				\     'auto_diary_index'   : 1,
 				\     'auto_generate_links': 1,
@@ -468,9 +474,6 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 vim.api.nvim_create_autocmd("VimEnter", {
 	command = 'lua require("notify")("Hello Shieh Yueh-Chang")',
-})
-vim.api.nvim_create_autocmd("VimEnter", {
-	command = 'lua require("notify")("Let\'s code!!")',
 })
 vim.api.nvim_create_autocmd("BufEnter", {
 	command = 'delmarks!',
