@@ -30,7 +30,7 @@ vim.keymap.set('n', "gk", "<Cmd>lua vim.lsp.buf.hover()<CR>") -- (2)
 -- ToggleTerm mappings
 lvim.builtin.terminal.open_mapping = "<esc><esc>" -- This is required some how to get (3) (4) to work
 vim.keymap.set('t', '<esc>', [[<C-\><C-n>]]) -- (3)
-vim.keymap.set('t', '<leader>q', [[<C-\><C-n><cmd>q<cr>]]) -- (4)
+vim.keymap.set('t', ',q', [[<C-\><C-n><cmd>q<cr>]]) -- (4)
 vim.keymap.set('t', '<C-l>', [[clear<cr>]])
 vim.keymap.set('n', "<M-x>", '<cmd>exe v:count1 . "ToggleTerm direction=horizontal"<CR>')
 vim.keymap.set('n', "<M-v>", '<cmd>exe v:count1 . "ToggleTerm direction=vertical size=50"<CR>')

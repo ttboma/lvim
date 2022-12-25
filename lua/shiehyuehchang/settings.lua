@@ -17,7 +17,7 @@ lvim.builtin.lualine.sections.lualine_a = {
 	{ 'mode', separator = { left = '' }, right_padding = 2 },
 }
 lvim.builtin.lualine.sections.lualine_z = {
-  { 'location', separator = { right = '' }, left_padding = 2 },
+  { 'progress', separator = { right = '' }, left_padding = 2 },
 }
 
 -- dashboard
