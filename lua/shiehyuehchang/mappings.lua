@@ -18,6 +18,11 @@ vim.keymap.set('n', "<S-l>", "g_")
 vim.keymap.set('n', "<S-h>", "_")
 vim.keymap.set('n', "<S-j>", "<C-d>")
 vim.keymap.set('n', "<S-k>", "<C-u>") -- overide "<Cmd>lua vim.lsp.buf.hover()<CR>", which requires (1) (2) to resolve
+vim.keymap.set('x', "<S-l>", "g_")
+vim.keymap.set('x', "<S-h>", "_")
+vim.keymap.set('x', "<S-j>", "<C-d>")
+vim.keymap.set('x', "<S-k>", "<C-u>")
+
 vim.keymap.set('n', "<S-up>", "<C-w>+")
 vim.keymap.set('n', "<S-down>", "<C-w>-")
 vim.keymap.set('n', "<S-right>", "<C-w>>")

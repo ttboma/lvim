@@ -1,7 +1,7 @@
 -- General
 lvim.log.level = "warn"
 lvim.use_icons = true -- enable icons
-lvim.colorscheme = "tokyonight-storm"
+lvim.colorscheme = "tokyonight-night"
 lvim.transparent_window = false
 
 -- nvimtree
@@ -55,6 +55,7 @@ lvim.lsp.installer.setup.ensure_installed = {
 	"jsonls",
 	"clangd",
 	"rust_analyzer",
+  "marksman"
 }
 -- change UI setting of `LspInstallInfo`
 -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>
@@ -96,8 +97,9 @@ lvim.format_on_save.enabled = false -- use <leader>lf mapping which maps to <cmd
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
 	{ command = "black", filetypes = { "python" } },
-	-- { command = "clang-format", filetypes = { "c", "cpp" }, extra_args = { "--style", "{IndentWidth: 2}" } },
-	-- { command = "rustfmt", filetypes = { "rust" } },
+	{ command = "markdownlint", filetypes = { "markdown", "vimwiki" } },
+	--  { command = "clang-format", filetypes = { "c", "cpp" }, extra_args = { "--style", "{IndentWidth: 2}" } },
+	--  { command = "rustfmt", filetypes = { "rust" } },
 	--  { command = "luaformatter", filetypes = { "lua" } },
 	-- 	{ command = "isort", filetypes = { "python" } },
 	-- 	{
@@ -115,6 +117,7 @@ formatters.setup {
 -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
+	{ command = "markdownlint", filetypes = { "markdown", "vimwiki" } },
 	--  { command = "cpplint", filetypes = { "cpp" } },
 	--  { command = "rstcheck", filetypes = { "rust" } },
 	-- 	{ command = "flake8", filetypes = { "python" } },
