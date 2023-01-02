@@ -10,7 +10,7 @@ endif
 -- General
 lvim.log.level = "warn"
 lvim.use_icons = true -- enable icons
-lvim.colorscheme = "tokyonight-night"
+lvim.colorscheme = "onedark"
 lvim.transparent_window = false
 
 -- nvimtree
@@ -21,7 +21,7 @@ lvim.builtin.terminal.active = true
 lvim.builtin.terminal.shell = "/bin/zsh"
 
 -- lualine
-lvim.builtin.lualine.options.theme = "tokyonight"
+lvim.builtin.lualine.options.theme = "onedark"
 lvim.builtin.lualine.sections.lualine_a = {
 	{ 'mode', separator = { left = '' }, right_padding = 2 },
 }

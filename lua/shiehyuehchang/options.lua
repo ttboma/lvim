@@ -43,3 +43,9 @@ vim.opt.spelllang = "en"
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.tags = "tags"
+
+vim.g.transparent_background = false -- transparent background(Default: false)
+vim.g.italic_comments = true -- italic comments(Default: true)
+vim.g.italic_keywords = true -- italic keywords(Default: true)
+vim.g.italic_functions = true -- italic functions(Default: false)
+vim.g.italic_variables = true -- italic variables(Default: false)

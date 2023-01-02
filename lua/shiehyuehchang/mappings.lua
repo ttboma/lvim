@@ -60,7 +60,6 @@ lvim.builtin.which_key.mappings[","] = {
 	t = { "<cmd>Vista!!<cr>", "Vista" },
 	r = { "<cmd>Rg<cr>", "fzf-Rg" },
 	R = { "<cmd>RnvimrToggle<cr>", "Ranger" },
-	o = { "<cmd>SymbolsOutline<cr>", "symbols-outline" },
 	d = { "<cmd>DrawIt<cr>", "Draw-It" },
 	s = { "<cmd>Startify<cr>", "Startify" }
 }
