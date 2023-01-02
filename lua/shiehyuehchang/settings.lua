@@ -1,3 +1,12 @@
+-- [How to use true colors in vim under tmux?](https://github.com/tmux/tmux/issues/1246)
+vim.cmd [[
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+]]
+
 -- General
 lvim.log.level = "warn"
 lvim.use_icons = true -- enable icons
