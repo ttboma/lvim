@@ -9,7 +9,6 @@ require "shiehyuehchang.additional_plugins"
 require "shiehyuehchang.mappings"
 require "shiehyuehchang.autocmd"
 
-
 -- lv-settings
 -- lvim.builtin.alpha.dashboard.section.buttons.val["1"].on_press = function ()
 -- lvim.builtin.alpha.dashboard.section.buttons.val["2"].on_press = function ()

@@ -10,7 +10,7 @@ endif
 -- General
 lvim.log.level = "warn"
 lvim.use_icons = true -- enable icons
-lvim.colorscheme = "onedark"
+lvim.colorscheme = "onedarkest"
 lvim.transparent_window = false
 
 -- nvimtree
@@ -21,7 +21,7 @@ lvim.builtin.terminal.active = true
 lvim.builtin.terminal.shell = "/bin/zsh"
 
 -- lualine
-lvim.builtin.lualine.options.theme = "onedark"
+lvim.builtin.lualine.options.theme = "seoul256" -- check out your options at https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md
 lvim.builtin.lualine.sections.lualine_a = {
 	{ 'mode', separator = { left = '' }, right_padding = 2 },
 }
@@ -57,6 +57,7 @@ lvim.builtin.treesitter.ensure_installed = {
 
 
 -- generic LSP settings
+lvim.lsp.diagnostics.virtual_text = false
 
 -- make sure server will always be installed even if the server is in skipped_servers list
 lvim.lsp.installer.setup.ensure_installed = {
