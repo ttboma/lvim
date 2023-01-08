@@ -10,7 +10,7 @@ endif
 -- General
 lvim.log.level = "warn"
 lvim.use_icons = true -- enable icons
-lvim.colorscheme = "onedarkest"
+lvim.colorscheme = "tokyonight-storm"
 lvim.transparent_window = false
 
 -- nvimtree
@@ -21,7 +21,7 @@ lvim.builtin.terminal.active = true
 lvim.builtin.terminal.shell = "/bin/zsh"
 
 -- lualine
-lvim.builtin.lualine.options.theme = "seoul256" -- check out your options at https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md
+lvim.builtin.lualine.options.theme = "everforest" -- check out your options at https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md
 lvim.builtin.lualine.sections.lualine_a = {
 	{ 'mode', separator = { left = '' }, right_padding = 2 },
 }
@@ -107,7 +107,7 @@ lvim.format_on_save.enabled = false -- use <leader>lf mapping which maps to <cmd
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
 	{ command = "black", filetypes = { "python" } },
-	{ command = "markdownlint", filetypes = { "markdown", "vimwiki" } },
+	{ command = "markdownlint", filetypes = { "markdown", "vimwiki", "wiki" } },
 	--  { command = "clang-format", filetypes = { "c", "cpp" }, extra_args = { "--style", "{IndentWidth: 2}" } },
 	--  { command = "rustfmt", filetypes = { "rust" } },
 	--  { command = "luaformatter", filetypes = { "lua" } },
@@ -127,7 +127,7 @@ formatters.setup {
 -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-	{ command = "markdownlint", filetypes = { "markdown", "vimwiki" } },
+	{ command = "markdownlint", filetypes = { "markdown", --[["vimwiki"]] } },
 	--  { command = "cpplint", filetypes = { "cpp" } },
 	--  { command = "rstcheck", filetypes = { "rust" } },
 	-- 	{ command = "flake8", filetypes = { "python" } },

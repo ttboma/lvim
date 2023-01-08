@@ -50,32 +50,30 @@ lvim.plugins = {
 			vim.g.mkdp_auto_start = 1
 		end,
 	},
+  { 'jghauser/follow-md-links.nvim' },
 	{ 'mzlogin/vim-markdown-toc' },
-	{
-		'vimwiki/vimwiki',
-		config = function()
-			vim.cmd [[
-			let g:vimwiki_list = [
-				\ 	{ 'path'               : '$HOME/SYCvimwiki',
-				\     'index'              : 'README',
-				\     'auto_toc'           : 1,
-				\ 	  'path_html'          : '$HOME/SYCvimwiki/html_site/',
-				\     'template_path'      : '$HOME/SYCvimwiki/templates/',
-				\ 	  'template_default'   : 'def_template',
-				\     'template_ext'       : '.html',
-				\     'nested_syntaxes'    : {'python': 'py', 'c++': 'cpp', 'yaml': 'yaml' },
-				\     'auto_tags'          : 1,
-				\     'auto_diary_index'   : 1,
-				\     'auto_generate_links': 1,
-				\     'auto_generate_tags' : 1,
-				\   },
-				\ ]
-			]]
-
-			-- add the pre tag for inserting code snippets
-			vim.cmd [[let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr, pre, script']]
-		end,
-	},
+	-- {
+	-- 	'vimwiki/vimwiki',
+	-- 	config = function()
+	-- 		vim.cmd [[
+	-- 		let g:vimwiki_list = [
+	-- 			\ 	{ 'path'               : '$HOME/SYCNotes',
+	-- 			\     'index'              : 'README',
+ --        \     'ext'                : '.md',
+ --        \     'syntax'             : 'markdown',
+	-- 			\ 	  'path_html'          : '$HOME/SYCNotes/html_site/',
+	-- 			\     'template_path'      : '$HOME/SYCNotes/templates/',
+	-- 			\ 	  'template_default'   : 'def_template',
+	-- 			\     'template_ext'       : '.html',
+ --        \     'links_space_char'   : '_'
+ --        \     'custom_wiki2html'   : 'make -C /Users/shiehyuehchang/SYCNotes/'
+	-- 			\   },
+	-- 			\ ]
+	-- 		]]
+	-- 		-- add the pre tag for inserting code snippets
+	-- 		vim.cmd [[let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr, pre, script']]
+	-- 	end,
+	-- },
 	{ 'junegunn/fzf' },
 	{ 'junegunn/fzf.vim' },
 	{ 'vim-scripts/DrawIt' },

@@ -64,8 +64,15 @@ lvim.builtin.which_key.mappings[","] = {
 	s = { "<cmd>Startify<cr>", "Startify" }
 }
 lvim.builtin.which_key.mappings['w'] = {
-	name = "+Vimwiki",
+	name = "+wiki",
+  w = { "<cmd>edit /Users/shiehyuehchang/SYCWikiSite/README.md<cr>", "open wiki" },
+  b = { "<cmd>silent !make build<cr>", "Build wiki html site"},
+  o = { "<cmd>silent !make open<cr>", "Open README.html"},
+  t = { "<cmd>GenToGFM<cr>", "GenToGFM" },
 }
+
+-- [go back to the previous file with backspace](https://github.com/jghauser/follow-md-links.nvim)
+vim.keymap.set('n', '<bs>', ':edit #<cr>', { silent = true })
 
 -- nvimtree mappings
 lvim.builtin.nvimtree.setup.view.mappings.list = {
