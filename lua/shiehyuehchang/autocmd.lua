@@ -19,6 +19,6 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("VimEnter", {
 	command = 'lua require("notify")("Hello Shieh Yueh-Chang")',
 })
-vim.api.nvim_create_autocmd("BufEnter", {
-	command = 'delmarks!',
-})
+-- vim.api.nvim_create_autocmd("BufEnter", {
+-- 	command = 'delmarks!',
+-- })
