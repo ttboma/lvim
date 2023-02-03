@@ -58,8 +58,8 @@ lvim.builtin.which_key.mappings["t"] = {
 lvim.builtin.which_key.mappings[","] = {
 	name = "+Extra",
 	t = { "<cmd>Vista!!<cr>", "Vista" },
-	r = { "<cmd>Rg<cr>", "fzf-Rg" },
-	R = { "<cmd>RnvimrToggle<cr>", "Ranger" },
+	R = { "<cmd>Rg<cr>", "fzf-Rg" },
+	f = { "<cmd>RnvimrToggle<cr>", "Ranger" },
 	d = { "<cmd>DrawIt<cr>", "Draw-It" },
 	s = { "<cmd>Startify<cr>", "Startify" }
 }
@@ -72,7 +72,7 @@ lvim.builtin.which_key.mappings['w'] = {
 }
 
 -- [go back to the previous file with backspace](https://github.com/jghauser/follow-md-links.nvim)
-vim.keymap.set('n', '<bs>', ':edit #<cr>', { silent = true })
+vim.keymap.set('n', '<bs>', '<cmd>edit #<cr>', { silent = true })
 
 -- nvimtree mappings
 lvim.builtin.nvimtree.setup.view.mappings.list = {
@@ -147,3 +147,11 @@ lvim.builtin.telescope.defaults.mappings = {
 		["<C-k>"] = actions.move_selection_previous,
 	},
 }
+
+-- Customized fzf-Rg for grepping in a specified directory
+-- usage: :Rgd /directory/you/would/like/to/search<cr> 
+vim.cmd[[
+command! -bang -nargs=* RgDir
+  \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(''), 1, fzf#vim#with_preview({'dir': <f-args>}), <bang>0)
+]]
+vim.keymap.set('n', ',,r', ':RgDir')
