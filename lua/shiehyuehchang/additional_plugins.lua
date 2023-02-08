@@ -75,7 +75,12 @@ lvim.plugins = {
 	-- 	end,
 	-- },
 	{ 'junegunn/fzf' },
-	{ 'junegunn/fzf.vim' },
+	{
+    'junegunn/fzf.vim',
+    config = function()
+      vim.g.fzf_layout = { down = '40%' }
+    end,
+  },
 	{ 'vim-scripts/DrawIt' },
 	{
 		'rcarriga/nvim-notify',
