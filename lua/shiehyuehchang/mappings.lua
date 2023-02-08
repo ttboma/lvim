@@ -66,7 +66,7 @@ lvim.builtin.which_key.mappings[","] = {
 lvim.builtin.which_key.mappings['w'] = {
 	name = "+wiki",
   w = { "<cmd>edit /Users/shiehyuehchang/SYCWikiSite/README.md<cr>", "Open Wiki Index (md)" },
-  o = { "<cmd>silent !make open<cr>", "Open Wiki Index (html)"},
+  h = { "<cmd>silent !make open<cr>", "Open Wiki Index (html)"},
   t = { "<cmd>GenToGFM<cr>", "GenToGFM" },
 }
 
