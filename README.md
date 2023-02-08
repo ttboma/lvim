@@ -1,3 +1,3 @@
 # README
 
-This is my lvim configuration!!
+This is my lvim configuration on Mac!!
