@@ -65,9 +65,8 @@ lvim.builtin.which_key.mappings[","] = {
 }
 lvim.builtin.which_key.mappings['w'] = {
 	name = "+wiki",
-  w = { "<cmd>edit /Users/shiehyuehchang/SYCWikiSite/README.md<cr>", "open wiki" },
-  b = { "<cmd>silent !make build<cr>", "Build wiki html site"},
-  o = { "<cmd>silent !make open<cr>", "Open README.html"},
+  w = { "<cmd>edit /Users/shiehyuehchang/SYCWikiSite/README.md<cr>", "Open Wiki Index (md)" },
+  o = { "<cmd>silent !make open<cr>", "Open Wiki Index (html)"},
   t = { "<cmd>GenToGFM<cr>", "GenToGFM" },
 }
 
@@ -154,4 +153,3 @@ vim.cmd[[
 command! -bang -nargs=* RgDir
   \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(''), 1, fzf#vim#with_preview({'dir': <f-args>}), <bang>0)
 ]]
-vim.keymap.set('n', ',,r', ':RgDir')
